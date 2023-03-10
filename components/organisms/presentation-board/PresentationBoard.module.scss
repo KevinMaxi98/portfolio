@@ -1,0 +1,9 @@
+$wrap: "presentationBoard";
+
+.#{$wrap} {
+  &__description {
+    display: flex;
+    align-items: center;
+    padding-top: 8px;
+  }
+}

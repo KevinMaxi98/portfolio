@@ -1,0 +1,14 @@
+$wrap: "title";
+
+.#{$wrap} {
+    font-family: StickyMemos, sans-serif;
+    font-size: 5rem;
+
+    &__text {
+        margin: 0 !important;
+    }
+
+}
+
+
+
