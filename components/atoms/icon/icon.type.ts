@@ -6,9 +6,9 @@ export interface IIcon {
 }
 
 export type typesIcon =
-    | '--outlined'
-    | '--round'
-    | '--sharp'
-    | '--two-tone'
+    | 'outlined'
+    | 'round'
+    | 'sharp'
+    | 'two-tone'
     | '';
 
