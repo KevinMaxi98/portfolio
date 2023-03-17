@@ -1,8 +1,28 @@
+@import "styles/mixins";
+@import "styles/breakpoints";
+
+
 $wrap: "subtitle";
 
 .#{$wrap} {
+  @include breakpoint('min-xsmall') {
+    font-size: 16px !important;
+  }
+
+  @include breakpoint('min-small') {
+  }
+
+  @include breakpoint('min-medium') {
+  }
+
+  @include breakpoint('min-large') {
+  }
+
+
+  @include breakpoint('min-xlarge') {
+  }
+
   &__text {
-    font-size: 2rem;
     margin: 0 !important;
   }
 }

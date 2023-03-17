@@ -4,7 +4,7 @@ export default function Subtitle(props: ISubtitle) {
     const {subtitle} = props
     return (
         <div className={styles.subtitle}>
-            <p className={styles.subtitle__text}>{subtitle}</p>
+            <h3 className={styles.subtitle__text}>{subtitle}</h3>
         </div>
     )
 }

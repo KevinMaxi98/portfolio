@@ -1,6 +1,22 @@
-@import "mixins";
+@import "styles/mixins";
+@import "styles/breakpoints";
 
 .main {
-    padding: 30px;
     width: fit-content;
+
+    @include breakpoint('min-xsmall') {
+        padding: 16px;
+    }
+
+    @include breakpoint('min-small') {
+    }
+
+    @include breakpoint('min-medium') {
+    }
+
+    @include breakpoint('min-large') {
+    }
+
+    @include breakpoint('min-xlarge') {
+    }
 }
