@@ -1,0 +1,29 @@
+$wrap: "presentationBoard";
+
+.#{$wrap} {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+
+  &__description {
+    display: flex;
+    align-items: center;
+    padding-top: 8px;
+
+    &--secondary {
+      justify-content: flex-end;
+      padding-bottom: 8px;
+    }
+  }
+
+  &__imageSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__footerSection {
+
+  }
+}
