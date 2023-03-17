@@ -32,4 +32,12 @@ describe("Icon", () => {
         expect(iconsTypes.length).toBe(1);
     })
 
+    it("Should set color if it is passed", () => {
+         component =  renderer.create(
+            <Icon color={'red'} type={'round'} iconName={'test'}></Icon>,
+        );
+        let tree = component.toJSON();
+        expect(tree).toMatchSnapshot();
+    })
+
 });
