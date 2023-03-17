@@ -5,7 +5,7 @@ export default function Title(props: ITitle) {
     const {title} = props
     return (
         <div className={styles.title}>
-            <h1 className={styles.title__text}>{title}</h1>
+            <h2 className={styles.title__text}>{title}</h2>
         </div>
     )
 }
