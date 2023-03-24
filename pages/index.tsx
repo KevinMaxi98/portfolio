@@ -16,6 +16,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
           <PresentationBoard></PresentationBoard>
+          <div className={styles.main__noise} data-key="noise"></div>
       </main>
     </>
   )
