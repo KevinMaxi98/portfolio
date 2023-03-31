@@ -30,13 +30,19 @@ export default function PresentationBoard() {
                 </div>
             </div>
             <div className={styles.presentationBoard__footerSection}>
-                <div
-                    className={`${styles.presentationBoard__description} ${styles['presentationBoard__description--secondary']}`}>
-                    <Icon className={styles.presentationBoard__icon} iconName={'remove'}></Icon>
-                    <Subtitle subtitle={SECONDARY_SUBTITLE}></Subtitle>
+                <div className={styles.presentationBoard__scrollSection}>
+                    <Icon iconName={'south'} size={'48px'}></Icon>
+                    <p><strong>Scroll</strong></p>
                 </div>
-                <Title textAlign={'end'} title={SECONDARY_TITLE_1}></Title>
-                <Title textAlign={'end'} title={SECONDARY_TITLE_2}></Title>
+                <div>
+                    <div
+                        className={`${styles.presentationBoard__description} ${styles['presentationBoard__description--secondary']}`}>
+                        <Icon className={styles.presentationBoard__icon} iconName={'remove'}></Icon>
+                        <Subtitle subtitle={SECONDARY_SUBTITLE}></Subtitle>
+                    </div>
+                    <Title textAlign={'end'} title={SECONDARY_TITLE_1}></Title>
+                    <Title textAlign={'end'} title={SECONDARY_TITLE_2}></Title>
+                </div>
             </div>
         </div>
     )
