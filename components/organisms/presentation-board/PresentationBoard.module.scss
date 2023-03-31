@@ -60,19 +60,4 @@ $wrap: "presentationBoard";
   &__icon {
     padding-right: 8px;
   }
-
-  &__scrollSection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-    @include breakpoint('min-xsmall') {
-      position: absolute;
-      bottom: 6px;
-    }
-    @include breakpoint('min-medium') {
-      position: inherit;
-      bottom: 0;
-    }
-  }
 }

@@ -4,6 +4,7 @@ import Icon from "../../atoms/icon/icon";
 import styles from "./PresentationBoard.module.scss";
 import Image from "next/image";
 import profilePicture from '../../../public/images/profile-picture.png';
+import InformativeIcon from "../../molecules/informative-icon/informativeIcon";
 
 export default function PresentationBoard() {
     const PRINCIPAL_TITLE_1 = 'SOFTWARE';
@@ -30,9 +31,8 @@ export default function PresentationBoard() {
                 </div>
             </div>
             <div className={styles.presentationBoard__footerSection}>
-                <div className={styles.presentationBoard__scrollSection}>
-                    <Icon iconName={'south'} size={'48px'}></Icon>
-                    <p><strong>Scroll</strong></p>
+                <div>
+                    <InformativeIcon></InformativeIcon>
                 </div>
                 <div>
                     <div
