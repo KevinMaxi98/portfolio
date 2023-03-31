@@ -4,7 +4,7 @@ import styles from "./BoldPrimaryText.module.scss"
 
 export default function BoldPrimaryText(props: any, specificProps: IBoldPrimaryText) {
     return (
-        <div className={styles.textScrollingSection}>
+        <div className={styles.boldPrimaryText}>
             {props.children}
         </div>
     )
