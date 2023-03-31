@@ -1,10 +1,14 @@
+@import "styles/mixins";
+@import "styles/breakpoints";
+
+
 $wrap: "presentationBoard";
 
 .#{$wrap} {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
+  height: calc(100vh - 48px);
 
   &__description {
     display: flex;
@@ -21,9 +25,39 @@ $wrap: "presentationBoard";
     display: flex;
     align-items: center;
     justify-content: center;
+    @include breakpoint('min-xsmall') {
+      padding-top: 16px;
+    }
+    @include breakpoint('min-medium') {
+      padding-top: 0;
+    }
+
+  }
+
+  &__imageContainer {
+    position: relative;
+    height: calc(100vh - 400px);
+    max-height: 380px;
+    width: 320px;
   }
 
   &__footerSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
 
+  &__headerSection {
+    justify-content: space-between;
+    @include breakpoint('min-xsmall') {
+      display: block;
+    }
+    @include breakpoint('min-medium') {
+      display: flex;
+    }
+  }
+
+  &__icon {
+    padding-right: 8px;
   }
 }

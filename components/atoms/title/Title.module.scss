@@ -23,7 +23,7 @@ $wrap: "title";
     }
 
     @include breakpoint('min-xlarge') {
-        font-size: 64px !important;
+        font-size: 80px !important;
     }
 
     &__text {

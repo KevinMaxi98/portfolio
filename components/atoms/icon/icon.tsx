@@ -2,12 +2,15 @@ import {IIcon} from "./icon.type";
 import styles from "./Icon.module.scss"
 
 export default function Icon(props: IIcon) {
-    const {iconName, size = '14px', type = '', color = ''} = props
+    const {iconName, size = '14px', type = '', color = '', className} = props
 
     const getIconClass = () => {
         let result = styles.icon
         if (type !== '') {
             result += ' icon--' + type
+        }
+        if (className) {
+            result = result + ' ' + className
         }
         return result
     }

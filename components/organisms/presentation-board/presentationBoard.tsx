@@ -4,6 +4,7 @@ import Icon from "../../atoms/icon/icon";
 import styles from "./PresentationBoard.module.scss";
 import Image from "next/image";
 import profilePicture from '../../../public/images/profile-picture.png';
+import InformativeIcon from "../../molecules/informative-icon/informativeIcon";
 
 export default function PresentationBoard() {
     const PRINCIPAL_TITLE_1 = 'SOFTWARE';
@@ -14,25 +15,34 @@ export default function PresentationBoard() {
     const SECONDARY_SUBTITLE = 'FULL STACK CAPABLE';
     return (
         <div className={styles.presentationBoard}>
-            <div>
-                <Title title={PRINCIPAL_TITLE_1}></Title>
-                <Title title={PRINCIPAL_TITLE_2}></Title>
-                <div className={styles.presentationBoard__description}>
-                    <Icon iconName={'remove'}></Icon>
-                    <Subtitle subtitle={PRINCIPAL_SUBTITLE}></Subtitle>
+            <div className={styles.presentationBoard__headerSection}>
+                <div>
+                    <Title title={PRINCIPAL_TITLE_1}></Title>
+                    <Title title={PRINCIPAL_TITLE_2}></Title>
+                    <div className={styles.presentationBoard__description}>
+                        <Icon className={styles.presentationBoard__icon} iconName={'remove'}></Icon>
+                        <Subtitle subtitle={PRINCIPAL_SUBTITLE}></Subtitle>
+                    </div>
                 </div>
-            </div>
-
-            <div className={styles.presentationBoard__imageSection}>
-                <Image src={profilePicture} width={251} height={256} alt={'Profile picture'}/>
+                <div className={styles.presentationBoard__imageSection}>
+                    <div className={styles.presentationBoard__imageContainer}>
+                        <Image src={profilePicture} fill alt={'Profile picture'}/>
+                    </div>
+                </div>
             </div>
             <div className={styles.presentationBoard__footerSection}>
-                <div className={`${styles.presentationBoard__description} ${styles['presentationBoard__description--secondary']}`}>
-                    <Icon iconName={'remove'}></Icon>
-                    <Subtitle subtitle={SECONDARY_SUBTITLE}></Subtitle>
+                <div>
+                    <InformativeIcon></InformativeIcon>
                 </div>
-                <Title textAlign={'end'} title={SECONDARY_TITLE_1}></Title>
-                <Title textAlign={'end'} title={SECONDARY_TITLE_2}></Title>
+                <div>
+                    <div
+                        className={`${styles.presentationBoard__description} ${styles['presentationBoard__description--secondary']}`}>
+                        <Icon className={styles.presentationBoard__icon} iconName={'remove'}></Icon>
+                        <Subtitle subtitle={SECONDARY_SUBTITLE}></Subtitle>
+                    </div>
+                    <Title textAlign={'end'} title={SECONDARY_TITLE_1}></Title>
+                    <Title textAlign={'end'} title={SECONDARY_TITLE_2}></Title>
+                </div>
             </div>
         </div>
     )

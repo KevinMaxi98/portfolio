@@ -8,6 +8,11 @@
     src: url("../public/fonts/google/Roboto-Light.ttf") format("opentype");
 }
 
+@font-face {
+    font-family: sf-pro-bold;
+    src: url("../public/fonts/SFPro/SFProDisplay-Bold.ttf");
+}
+
 body {
     font-family: Roboto, sans-serif;
     font-weight: 300;

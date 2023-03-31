@@ -1,0 +1,20 @@
+@import "styles/mixins";
+@import "styles/breakpoints";
+
+
+$wrap: "boldPrimaryText";
+
+.#{$wrap} {
+
+  opacity: 0.2;
+  font-family: sf-pro-bold;
+
+  @include breakpoint('min-xsmall') {
+    font-size: 64px;
+  }
+
+  @include breakpoint('min-medium') {
+    font-size: 96px;
+  }
+
+}

@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.scss'
 import PresentationBoard from "../components/organisms/presentation-board/presentationBoard";
+import TextScrolling from "../components/organisms/text-scrolling/textScrolling";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,6 +17,8 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
           <PresentationBoard></PresentationBoard>
+          <TextScrolling></TextScrolling>
+          <div className={styles.main__noise} data-key="noise"></div>
       </main>
     </>
   )

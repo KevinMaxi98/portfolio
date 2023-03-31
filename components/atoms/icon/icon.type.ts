@@ -3,6 +3,7 @@ export interface IIcon {
     color?: string,
     type?: typesIcon,
     size?: string,
+    className?: string
 }
 
 export type typesIcon =
