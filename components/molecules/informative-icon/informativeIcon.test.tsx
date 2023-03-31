@@ -11,7 +11,7 @@ describe("InformativeIcon", () => {
     })
     afterEach(cleanup);
 
-    it("Should render icon component", () => {
+    it("Should render informativeIcon component", () => {
         let tree = component.toJSON();
         expect(tree).toMatchSnapshot();
     });
