@@ -52,4 +52,24 @@ $wrap: "main";
       animation-name: styles_main__noise;
     }
   }
+
+  &__presentationSection {
+    &__unReveal {
+      position: relative;
+      opacity: 1;
+      &--active {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__textScrollingSection {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    background-color: black;
+    z-index: 1;
+    position: relative;
+  }
 }

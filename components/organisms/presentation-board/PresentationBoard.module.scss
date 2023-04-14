@@ -9,6 +9,11 @@ $wrap: "presentationBoard";
   flex-direction: column;
   justify-content: space-between;
   height: calc(100vh - 48px);
+  position: sticky;
+  top: 24px;
+
+
+
 
   &__description {
     display: flex;

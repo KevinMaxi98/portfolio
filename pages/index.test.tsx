@@ -9,4 +9,8 @@ describe("Home", () => {
         let tree = component.toJSON();
         expect(tree).toMatchSnapshot();
     });
+
+    it ("Should set opacity according scrolling", () => {
+
+    })
 });
