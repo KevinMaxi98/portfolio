@@ -7,7 +7,8 @@ $wrap: "boldPrimaryText";
 .#{$wrap} {
 
   opacity: 0.2;
-  font-family: sf-pro-bold;
+  font-family: sf-pro-bold, sans-serif;
+  color: white;
 
   @include breakpoint('min-xsmall') {
     font-size: 64px;

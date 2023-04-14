@@ -13,8 +13,12 @@ export default function PresentationBoard() {
     const SECONDARY_TITLE_1 = 'KEVIN'
     const SECONDARY_TITLE_2 = 'MAXI';
     const SECONDARY_SUBTITLE = 'FULL STACK CAPABLE';
+
+    const classes = `${styles.presentationBoard}`
+
+
     return (
-        <div className={styles.presentationBoard}>
+        <div id='presentation-board' className={classes}>
             <div className={styles.presentationBoard__headerSection}>
                 <div>
                     <Title title={PRINCIPAL_TITLE_1}></Title>
