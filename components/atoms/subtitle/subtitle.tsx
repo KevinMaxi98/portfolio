@@ -1,5 +1,5 @@
 import {ISubtitle} from "./subtitle.type";
-import styles from "./Subtitle.module.scss"
+import styles from "./subtitle.module.scss"
 export default function Subtitle(props: ISubtitle) {
     const {subtitle} = props
     return (

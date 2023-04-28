@@ -1,12 +1,17 @@
-import renderer from "react-test-renderer";
 import Subtitle from "./subtitle";
+import {cleanup, render, screen} from "@testing-library/react";
+import '@testing-library/jest-dom';
+
 
 describe("Subtitle", () => {
+    afterEach(cleanup);
     it("Should render subtitle component", () => {
-        const component = renderer.create(
+        render(
             <Subtitle subtitle={'test'}></Subtitle>,
         );
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
+        let heading = screen.getByRole("heading");
+        let text = screen.getByText("test");
+        expect(heading).toBeInTheDocument();
+        expect(text).toBeInTheDocument();
     });
 });
