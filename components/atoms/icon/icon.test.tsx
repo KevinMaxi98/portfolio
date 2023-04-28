@@ -1,43 +1,37 @@
-import renderer from "react-test-renderer";
 import Icon from "./icon";
-import {cleanup, render} from "@testing-library/react";
+import {cleanup, render, screen} from "@testing-library/react";
+import '@testing-library/jest-dom';
 
 describe("Icon", () => {
-    let component: any
-    beforeEach(()=> {
-        component = renderer.create(
-            <Icon iconName={'test'}></Icon>,
-        );
-    })
     afterEach(cleanup);
 
     it("Should render icon component", () => {
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
+        render(
+            <Icon iconName={'test'}></Icon>,
+        );
+        const icon = screen.getByRole("icon")
+        const iconName = screen.getByText("test")
+        expect(icon).toBeInTheDocument();
+        expect(iconName).toBeInTheDocument();
     });
 
     it("Should render with icon custom classes", () => {
-        component = renderer.create(
+        render(
             <Icon type={'round'} iconName={'test'}></Icon>,
         );
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
+        const icon = screen.getByRole("icon").parentElement?.getElementsByClassName("icon--round");
+
+        expect(icon?.length).toBe(1);
     })
 
-    it("Should set correct classes according to types", () => {
-        const {container} =  render(
-           <Icon type={'round'} iconName={'test'}></Icon>,
-        );
-        const iconsTypes = container.getElementsByClassName('icon--round')
-        expect(iconsTypes.length).toBe(1);
-    })
 
     it("Should set color if it is passed", () => {
-         component =  renderer.create(
+         render(
             <Icon color={'red'} type={'round'} iconName={'test'}></Icon>,
         );
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
+        const icon = screen.getByRole("icon").parentElement?.getElementsByClassName("icon--round");
+        // @ts-ignore
+        expect(icon[0].getAttribute("style")).toBe("font-size: 14px; color: red;");
     })
 
 });

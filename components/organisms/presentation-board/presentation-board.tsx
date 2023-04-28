@@ -1,10 +1,10 @@
 import Title from "../../atoms/title/title";
 import Subtitle from "../../atoms/subtitle/subtitle";
 import Icon from "../../atoms/icon/icon";
-import styles from "./PresentationBoard.module.scss";
+import styles from "./presentation-board.module.scss";
 import Image from "next/image";
 import profilePicture from '../../../public/images/profile-picture.png';
-import InformativeIcon from "../../molecules/informative-icon/informativeIcon";
+import InformativeIcon from "../../molecules/informative-icon/informative-icon";
 
 export default function PresentationBoard() {
     const PRINCIPAL_TITLE_1 = 'SOFTWARE';

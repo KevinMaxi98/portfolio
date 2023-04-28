@@ -1,5 +1,5 @@
 import {ITitle} from "./title.type";
-import styles from './Title.module.scss'
+import styles from './title.module.scss'
 
 export default function Title(props: ITitle) {
     const {title, textAlign} = props

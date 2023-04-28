@@ -1,5 +1,5 @@
 import {IIcon} from "./icon.type";
-import styles from "./Icon.module.scss"
+import styles from "./icon.module.scss"
 
 export default function Icon(props: IIcon) {
     const {iconName, size = '14px', type = '', color = '', className} = props
@@ -28,7 +28,9 @@ export default function Icon(props: IIcon) {
 
     return (
         <i
+            role="icon"
             style={getStyles()}
+            aria-label={iconName}
             className={getIconClass()}>
             {iconName}
         </i>

@@ -1,12 +1,8 @@
 import Head from 'next/head'
-import {Inter} from '@next/font/google'
 import styles from '../styles/Home.module.scss'
-import PresentationBoard from "../components/organisms/presentation-board/presentationBoard";
-import TextScrolling from "../components/organisms/text-scrolling/textScrolling";
+import PresentationBoard from "../components/organisms/presentation-board/presentation-board";
+import TextScrolling from "../components/organisms/text-scrolling/text-scrolling";
 import {useEffect} from "react";
-
-const inter = Inter({subsets: ['latin']})
-
 
 export default function Home() {
 

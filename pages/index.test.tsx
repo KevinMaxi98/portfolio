@@ -1,13 +1,18 @@
 import Home from "../pages/index";
-import renderer from 'react-test-renderer';
+import {render, screen} from "@testing-library/react";
+import '@testing-library/jest-dom'
 
 describe("Home", () => {
     it("Should render home page", () => {
-        const component = renderer.create(
+        render(
             <Home></Home>,
         );
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
+        const main = screen.getByRole("main")
+        const presentationBoard = screen.getByRole("heading", {
+            name: "KEVIN"
+        })
+        expect(presentationBoard).toBeInTheDocument();
+        expect(main).toBeInTheDocument();
     });
 
     it ("Should set opacity according scrolling", () => {

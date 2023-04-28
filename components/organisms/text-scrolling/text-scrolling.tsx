@@ -1,8 +1,7 @@
-import {ITextScrolling} from "./textScrolling.types";
-import BoldPrimaryText from "../../atoms/bold-primary-text/boldPrimaryText";
-import styles from "./TextScrolling.module.scss"
+import BoldPrimaryText from "../../atoms/bold-primary-text/bold-primary-text";
+import styles from "./text-scrolling.module.scss"
 
-export default function TextScrolling(props?: ITextScrolling) {
+export default function TextScrolling() {
     const phrases = [
         'Over the years I have spent time converting designs into',
         'pixel-perfect,',
